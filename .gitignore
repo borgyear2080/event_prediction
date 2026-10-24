@@ -1,0 +1,62 @@
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+*.ini
+
+# ==========================================
+# Sensitive Data & Environment Variables
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.cert
+*.secret
+
+# ==========================================
+# Common Packages & Dependencies
+# ==========================================
+node_modules/
+bower_components/
+jspm_packages/
+.pnpm-store/
+
+# ==========================================
+# Logs and Databases
+# ==========================================
+*.log
+*.sqlite
+*.db
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# IntelliJ / WebStorm / PyCharm
+.idea/
+*.iws
+*.iml
+
+# General text editors
+*~
+*.swp
+*.bak
