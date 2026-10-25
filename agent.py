@@ -13,7 +13,7 @@ class MessagesState(TypedDict):
 
 
 class Agent:
-    def __init__(self, model, tools, system_prompt="You are a helpful assistant."):
+    def __init__(self, model, tools, system_prompt="You are a helpful assistant for a personal financial advisor trying to understand client preferences, behaviours and interests."):
         self.model_with_tools = model.bind_tools(tools)
         self.tools_by_name = {tool.name: tool for tool in tools}
         self.system_prompt = system_prompt
@@ -84,3 +84,16 @@ model_2 = llm2
 agent_tools = AgentTools()
 tools = agent_tools.get_tools()
 agent = Agent(model, tools)
+
+messages = []
+def chat(text):
+    global messages
+    result = agent.invoke(messages + [("user", text)])
+    messages = result["messages"]
+    messages[-1].pretty_print()
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() in ["exit", "quit"]:
+        break
+    chat(user_input)

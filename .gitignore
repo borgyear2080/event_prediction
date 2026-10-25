@@ -26,6 +26,10 @@ ehthumbs_vista.db
 *.key
 *.cert
 *.secret
+*.csv
+
+dataset/transactions.csv
+dataset/rules1.csv
 
 # ==========================================
 # Common Packages & Dependencies
