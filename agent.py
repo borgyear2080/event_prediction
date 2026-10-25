@@ -6,7 +6,7 @@ from langgraph.graph import StateGraph, START, END
 from agent_tools import AgentTools
 from llm import LLMs
 
-print("Hi")
+
 class MessagesState(TypedDict):
     messages: Annotated[list[AnyMessage], operator.add]
     llm_calls: int
